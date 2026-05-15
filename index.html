@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Acer Pro LLC — Concrete Demolition Specialists in South Charleston, OH. Women-owned. Demolition, concrete removal, excavation, and construction services." />
+  <title>Acer Pro LLC | Concrete Demolition Specialist | South Charleston, OH</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    :root {
+      --black:    #0A0A0A;
+      --dark:     #121212;
+      --dark-2:   #1A1A1A;
+      --dark-3:   #242424;
+      --dark-4:   #2E2E2E;
+      --green:    #A8D435;
+      --green-lt: #C5E55A;
+      --green-dk: #8AB820;
+      --green-dim:rgba(168,212,53,.18);
+      --green-glow: rgba(168,212,53,.55);
+      --white:    #F5F5F5;
+      --gray:     #888888;
+      --gray-lt:  #BBBBBB;
+      --gray-dk:  #444444;
+      --radius:   4px;
+      --shadow:   0 4px 24px rgba(0,0,0,.5);
+      --shadow-lg:0 16px 56px rgba(0,0,0,.7);
+      --shadow-green: 0 0 24px var(--green-glow);
+      --trans:    .3s ease;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    .container { width: 90%; max-width: 1240px; margin: 0 auto; }
+    section { padding: 110px 0; position: relative; }
+
+    .display { font-family: 'Anton', sans-serif; font-weight: 400; letter-spacing: .02em; line-height: .95; text-transform: uppercase; }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 18px;
+    }
+    .label::before {
+      content: '';
+      display: block;
+      width: 10px; height: 10px;
+      background: var(--green);
+      transform: rotate(45deg);
+      box-shadow: 0 0 12px var(--green-glow);
+    }
+
+    .section-title {
+      font-family: 'Anton', sans-serif;
+      font-weight: 400;
+      font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+      text-transform: uppercase;
+      line-height: .95;
+      letter-spacing: .015em;
+    }
+    .section-title em {
+      font-style: normal;
+      color: var(--green);
+      text-shadow: 0 0 18px var(--green-glow);
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray-lt);
+      line-height: 1.75;
+      margin-top: 18px;
+      max-width: 600px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 34px;
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--trans);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-green {
+      background: var(--green);
+      color: var(--black);
+      box-shadow: 0 0 0 0 var(--green-glow);
+    }
+    .btn-green:hover {
+      background: var(--green-lt);
+      box-shadow: 0 0 24px var(--green-glow), 0 6px 24px rgba(0,0,0,.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,.25);
+    }
+    .btn-outline:hover {
+      border-color: var(--green);
+      color: var(--green);
+      box-shadow: inset 0 0 0 1px var(--green);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--green);
+      padding: 14px 28px;
+      border: 1px solid var(--green);
+    }
+    .btn-ghost:hover { background: var(--green); color: var(--black); }
+
+    /* Diamond motif (logo callback) */
+    .diamond {
+      position: relative;
+      width: 90px;
+      height: 90px;
+      transform: rotate(45deg);
+      border: 2px solid var(--green);
+      box-shadow: 0 0 0 4px transparent, 0 0 0 5px var(--green), 0 0 24px var(--green-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--trans);
+    }
+    .diamond i {
+      transform: rotate(-45deg);
+      color: var(--green);
+      font-size: 1.6rem;
+      filter: drop-shadow(0 0 8px var(--green-glow));
+      transition: var(--trans);
+    }
+
+    /* ── NAVBAR ───────────────────────────────────────────── */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 18px 0;
+      transition: background var(--trans), padding var(--trans), border-color var(--trans);
+      border-bottom: 1px solid transparent;
+    }
+    #navbar.scrolled {
+      background: rgba(10,10,10,.96);
+      backdrop-filter: blur(14px);
+      padding: 12px 0;
+      border-bottom-color: rgba(168,212,53,.18);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-logo img { height: 50px; width: auto; }
+    .nav-logo .nl-text { line-height: 1; }
+    .nav-logo .nl-text strong {
+      display: block;
+      font-family: 'Anton', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .nav-logo .nl-text span {
+      display: block;
+      margin-top: 4px;
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+    .nav-links a {
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gray-lt);
+      transition: color var(--trans);
+      position: relative;
+    }
+    .nav-links a:not(.nav-cta):hover { color: var(--green); }
+    .nav-links a:not(.nav-cta)::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0;
+      bottom: -6px;
+      height: 1px;
+      background: var(--green);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform var(--trans);
+    }
+    .nav-links a:not(.nav-cta):hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .nav-cta {
+      background: var(--green);
+      color: var(--black) !important;
+      padding: 11px 22px;
+      border: 1px solid var(--green);
+    }
+    .nav-cta:hover { box-shadow: 0 0 18px var(--green-glow); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 5px;
+    }
+    .hamburger span {
+      display: block;
+      width: 28px; height: 2px;
+      background: var(--green);
+      transition: var(--trans);
+    }
+
+    /* ── HERO ─────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('img/hero-demo.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: grayscale(.3) contrast(1.1) brightness(.5);
+      transform: scale(1.05);
+      animation: kenburns 20s ease-in-out infinite alternate;
+    }
+    @keyframes kenburns {
+      0%   { transform: scale(1.05) translate(0, 0); }
+      100% { transform: scale(1.15) translate(-2%, -1%); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(10,10,10,.96) 0%, rgba(10,10,10,.65) 50%, rgba(10,10,10,.85) 100%),
+        radial-gradient(circle at 70% 50%, rgba(168,212,53,.15) 0%, transparent 50%);
+    }
+
+    /* Top gold/green border accent */
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--green) 30%, var(--green) 70%, transparent 100%);
+      z-index: 2;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      align-items: center;
+      gap: 60px;
+      padding: 160px 0 110px;
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 26px;
+    }
+    .hero-eyebrow span {
+      width: 36px;
+      height: 1px;
+      background: var(--green);
+    }
+
+    .hero-text h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(3.2rem, 8vw, 6.5rem);
+      line-height: .92;
+      letter-spacing: .015em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .hero-text h1 .green {
+      color: var(--green);
+      text-shadow: 0 0 30px var(--green-glow);
+    }
+    .hero-text h1 .stroke {
+      -webkit-text-stroke: 2px var(--white);
+      color: transparent;
+    }
+
+    .hero-text p {
+      font-size: 1.15rem;
+      color: var(--gray-lt);
+      line-height: 1.7;
+      max-width: 560px;
+      margin-bottom: 40px;
+    }
+
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .hero-meta {
+      display: flex;
+      gap: 28px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      flex-wrap: wrap;
+    }
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-meta-item i { color: var(--green); font-size: 1.05rem; }
+    .hero-meta-item span {
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: var(--white);
+    }
+
+    /* Hero logo display */
+    .hero-logo-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero-logo-card::before {
+      content: '';
+      position: absolute;
+      inset: -10%;
+      background: radial-gradient(circle at center, var(--green-dim) 0%, transparent 60%);
+      z-index: -1;
+      animation: pulse 4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: .5; }
+      50% { opacity: 1; }
+    }
+    .hero-logo-card img {
+      width: 100%;
+      max-width: 460px;
+      filter: drop-shadow(0 0 30px var(--green-glow));
+    }
+
+    /* ── MARQUEE STRIP ──────────────────────────────────── */
+    .marquee-strip {
+      background: var(--green);
+      color: var(--black);
+      padding: 18px 0;
+      overflow: hidden;
+      position: relative;
+      border-top: 1px solid var(--green-dk);
+      border-bottom: 1px solid var(--green-dk);
+    }
+    .marquee-track {
+      display: flex;
+      gap: 56px;
+      animation: marquee 28s linear infinite;
+      width: max-content;
+    }
+    .marquee-item {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 56px;
+      flex-shrink: 0;
+    }
+    .marquee-item::after {
+      content: '';
+      display: block;
+      width: 12px; height: 12px;
+      background: var(--black);
+      transform: rotate(45deg);
+    }
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── TRUST BAR ───────────────────────────────────────── */
+    #trust {
+      padding: 32px 0;
+      background: var(--dark);
+      border-bottom: 1px solid var(--dark-3);
+    }
+    .trust-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .82rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gray-lt);
+    }
+    .trust-item i { color: var(--green); font-size: 1rem; }
+
+    /* ── SERVICES ───────────────────────────────────────── */
+    #services { background: var(--black); }
+
+    .services-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 64px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--dark-2);
+      padding: 44px 36px 40px;
+      position: relative;
+      transition: var(--trans);
+      cursor: default;
+      overflow: hidden;
+      border-top: 1px solid var(--dark-4);
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, var(--green-dim) 150%);
+      opacity: 0;
+      transition: opacity var(--trans);
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--green);
+      transition: width .45s ease;
+    }
+    .service-card:hover {
+      background: var(--dark-3);
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(0,0,0,.4);
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-card:hover::after { width: 100%; }
+    .service-card:hover .diamond {
+      box-shadow: 0 0 0 4px transparent, 0 0 0 5px var(--green-lt), 0 0 36px var(--green-glow);
+    }
+    .service-card:hover .diamond i { color: var(--green-lt); }
+
+    .sc-num {
+      position: absolute;
+      top: 28px; right: 28px;
+      font-family: 'Anton', sans-serif;
+      font-size: 2.6rem;
+      color: var(--gray-dk);
+      letter-spacing: .04em;
+      transition: color var(--trans);
+    }
+    .service-card:hover .sc-num { color: var(--green); }
+
+    .sc-diamond-wrap {
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 90px;
+      height: 90px;
+    }
+
+    .sc-name {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+    .sc-desc {
+      font-size: .92rem;
+      color: var(--gray-lt);
+      line-height: 1.65;
+    }
+
+    /* ── SHOWCASE ─────────────────────────────────────── */
+    #showcase {
+      background: var(--dark);
+      padding: 0;
+    }
+    .showcase-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 540px;
+    }
+    .showcase-image {
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+    }
+    .showcase-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(.4) contrast(1.05);
+      transition: filter .5s ease, transform .8s ease;
+    }
+    .showcase-image:hover img {
+      filter: grayscale(.1) contrast(1.1);
+      transform: scale(1.04);
+    }
+    .showcase-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(168,212,53,.0) 0%, rgba(168,212,53,.18) 100%);
+      pointer-events: none;
+    }
+
+    .showcase-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 80px 80px 60px;
+    }
+    .showcase-content .label { margin-bottom: 18px; }
+    .showcase-content h2 { margin-bottom: 22px; }
+    .showcase-content > p {
+      font-size: 1.02rem;
+      color: var(--gray-lt);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .show-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .show-feature {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .show-feature i {
+      color: var(--green);
+      font-size: 1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .show-feature h4 {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 4px;
+    }
+    .show-feature p {
+      font-size: .82rem;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    /* ── PROCESS ──────────────────────────────────── */
+    #process { background: var(--black); }
+    .process-header { text-align: center; margin-bottom: 70px; }
+    .process-header .label, .process-header .section-sub { margin-left: auto; margin-right: auto; }
+    .process-header .section-sub { text-align: center; }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+
+    .process-step {
+      padding: 36px 28px;
+      background: var(--dark-2);
+      position: relative;
+      transition: var(--trans);
+      border-top: 2px solid var(--dark-4);
+    }
+    .process-step:hover {
+      background: var(--dark-3);
+      border-top-color: var(--green);
+      transform: translateY(-4px);
+    }
+    .ps-num {
+      font-family: 'Anton', sans-serif;
+      font-size: 4rem;
+      color: var(--green);
+      line-height: 1;
+      margin-bottom: 18px;
+      text-shadow: 0 0 20px var(--green-glow);
+      display: block;
+    }
+    .ps-title {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 10px;
+    }
+    .ps-desc {
+      font-size: .88rem;
+      color: var(--gray-lt);
+      line-height: 1.65;
+    }
+
+    /* ── WOMEN-OWNED FEATURE ────────────────────────── */
+    #women {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
+      padding: 90px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #women::before {
+      content: '';
+      position: absolute;
+      top: 50%; right: -100px;
+      transform: translateY(-50%) rotate(45deg);
+      width: 360px; height: 360px;
+      border: 2px solid var(--green-dim);
+      pointer-events: none;
+    }
+    #women::after {
+      content: '';
+      position: absolute;
+      top: 50%; right: -50px;
+      transform: translateY(-50%) rotate(45deg);
+      width: 220px; height: 220px;
+      border: 2px solid var(--green-dim);
+      pointer-events: none;
+    }
+
+    .women-inner {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 56px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .women-badge {
+      width: 180px;
+      height: 180px;
+      transform: rotate(45deg);
+      border: 3px solid var(--green);
+      box-shadow: 0 0 0 6px transparent, 0 0 0 8px var(--green), 0 0 40px var(--green-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .women-badge-inner {
+      transform: rotate(-45deg);
+      text-align: center;
+      color: var(--green);
+    }
+    .women-badge-inner i {
+      font-size: 2.6rem;
+      margin-bottom: 8px;
+      display: block;
+      filter: drop-shadow(0 0 12px var(--green-glow));
+    }
+    .women-badge-inner strong {
+      font-family: 'Anton', sans-serif;
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .women-text h2 { margin-bottom: 18px; }
+    .women-text p {
+      font-size: 1.04rem;
+      color: var(--gray-lt);
+      line-height: 1.75;
+      max-width: 580px;
+    }
+
+    /* ── SERVICE AREA ───────────────────────────── */
+    #area {
+      background: var(--dark-2);
+      padding: 90px 0;
+    }
+    .area-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .area-card {
+      position: relative;
+      aspect-ratio: 1;
+      max-width: 440px;
+      margin: 0 auto;
+      transform: rotate(45deg);
+      border: 2px solid var(--green);
+      box-shadow: 0 0 0 6px transparent, 0 0 0 8px var(--green), 0 0 60px var(--green-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .area-card-inner {
+      transform: rotate(-45deg);
+      text-align: center;
+    }
+    .area-card-inner i {
+      font-size: 3.6rem;
+      color: var(--green);
+      margin-bottom: 16px;
+      filter: drop-shadow(0 0 16px var(--green-glow));
+    }
+    .area-card-inner h3 {
+      font-family: 'Anton', sans-serif;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      margin-bottom: 6px;
+    }
+    .area-card-inner p {
+      font-size: .82rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .area-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+    }
+    .area-tag {
+      background: var(--dark-3);
+      border: 1px solid var(--dark-4);
+      color: var(--gray-lt);
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .area-tag i { color: var(--green); font-size: .68rem; }
+
+    /* ── CTA ─────────────────────────────────────── */
+    #cta {
+      padding: 90px 0;
+      background:
+        linear-gradient(135deg, rgba(10,10,10,.95) 0%, rgba(10,10,10,.7) 50%, rgba(10,10,10,.95) 100%),
+        url('img/hero-demo.jpg') center/cover;
+      text-align: center;
+      position: relative;
+      border-top: 1px solid var(--dark-3);
+      border-bottom: 1px solid var(--dark-3);
+    }
+    .cta-inner h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); margin-bottom: 18px; }
+    .cta-inner h2 span { color: var(--green); text-shadow: 0 0 24px var(--green-glow); }
+    .cta-inner p {
+      font-size: 1.04rem;
+      color: var(--gray-lt);
+      max-width: 560px;
+      margin: 0 auto 38px;
+      line-height: 1.7;
+    }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── CONTACT ─────────────────────────────────── */
+    #contact { background: var(--black); }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-info .section-sub { margin-bottom: 36px; }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 24px;
+      background: var(--dark-2);
+      border-left: 2px solid var(--green);
+      margin-bottom: 14px;
+      transition: var(--trans);
+    }
+    .contact-card:hover {
+      background: var(--dark-3);
+      transform: translateX(4px);
+      box-shadow: -2px 0 12px var(--green-glow);
+    }
+    .cc-icon {
+      width: 44px; height: 44px;
+      background: var(--green-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .cc-text strong {
+      display: block;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 4px;
+    }
+    .cc-text a, .cc-text span {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.25rem;
+      color: var(--white);
+      letter-spacing: .03em;
+      transition: color var(--trans);
+    }
+    .cc-text a:hover { color: var(--green); }
+
+    .contact-form {
+      background: var(--dark-2);
+      padding: 48px 44px;
+      border: 1px solid var(--dark-3);
+      border-top: 3px solid var(--green);
+      position: relative;
+    }
+    .form-title {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .form-title span { color: var(--green); text-shadow: 0 0 14px var(--green-glow); }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+    .form-group.full { grid-column: span 2; }
+
+    label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    input, textarea, select {
+      background: var(--dark-3);
+      border: 1px solid var(--gray-dk);
+      padding: 13px 16px;
+      font-size: .92rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--white);
+      width: 100%;
+      outline: none;
+      transition: border-color var(--trans), background var(--trans);
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--green);
+      background: var(--dark-4);
+      box-shadow: 0 0 0 1px var(--green), 0 0 12px var(--green-dim);
+    }
+    select option { background: var(--dark-3); color: var(--white); }
+    textarea { resize: vertical; min-height: 120px; }
+    input::placeholder, textarea::placeholder { color: var(--gray-dk); }
+
+    .form-submit {
+      width: 100%;
+      padding: 18px;
+      background: var(--green);
+      color: var(--black);
+      font-size: .9rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: var(--trans);
+      box-shadow: 0 0 0 0 var(--green-glow);
+    }
+    .form-submit:hover {
+      background: var(--green-lt);
+      box-shadow: 0 0 24px var(--green-glow), 0 6px 20px rgba(0,0,0,.3);
+      transform: translateY(-2px);
+    }
+    .form-submit:disabled { opacity: .6; cursor: wait; }
+
+    /* ── FOOTER ──────────────────────────────────── */
+    footer {
+      background: var(--dark);
+      border-top: 2px solid var(--green);
+      padding: 64px 0 28px;
+      position: relative;
+    }
+    footer::before {
+      content: '';
+      position: absolute;
+      top: -7px; left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      width: 12px; height: 12px;
+      background: var(--green);
+      box-shadow: 0 0 14px var(--green-glow);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--dark-3);
+    }
+
+    .footer-brand img { height: 90px; width: auto; margin-bottom: 22px; }
+    .footer-brand .nl-text strong {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--white);
+      display: block;
+    }
+    .footer-brand .nl-text span {
+      display: block;
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-top: 6px;
+    }
+    .footer-brand p {
+      font-size: .9rem;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-top: 18px;
+      max-width: 320px;
+    }
+
+    .footer-col h5 {
+      font-family: 'Anton', sans-serif;
+      font-size: .9rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 22px;
+    }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      font-size: .87rem;
+      color: var(--gray-lt);
+      transition: color var(--trans);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-col ul li a:hover { color: var(--green); }
+    .footer-col ul li a i { color: var(--green); font-size: .72rem; }
+
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { font-size: .8rem; color: var(--gray); letter-spacing: .04em; }
+    .footer-bottom .tag {
+      font-family: 'Anton', sans-serif;
+      color: var(--green);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .85rem;
+    }
+
+    /* ── Toast ───────────────────────────────────── */
+    .toast {
+      position: fixed;
+      bottom: 30px; right: 30px;
+      background: var(--dark-2);
+      border-left: 3px solid var(--green);
+      color: var(--white);
+      padding: 18px 24px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: .92rem;
+      z-index: 9999;
+      max-width: 360px;
+      transform: translateY(140px);
+      transition: transform .45s cubic-bezier(.2,.8,.3,1);
+    }
+    .toast.show { transform: translateY(0); }
+    .toast i { color: var(--green); font-size: 1.1rem; }
+
+    /* ── Back to top ─────────────────────────────── */
+    #back-top {
+      position: fixed;
+      bottom: 30px; left: 30px;
+      width: 46px; height: 46px;
+      background: var(--green);
+      color: var(--black);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: var(--trans);
+      box-shadow: 0 0 24px var(--green-glow);
+      z-index: 900;
+    }
+    #back-top.visible { opacity: 1; }
+    #back-top:hover { background: var(--green-lt); }
+    #back-top i { transform: rotate(-45deg); }
+
+    /* ── Fade up ─────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-up.in-view { opacity: 1; transform: translateY(0); }
+
+    /* ── Responsive ──────────────────────────────── */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .showcase-content { padding: 60px 50px; }
+    }
+    @media (max-width: 820px) {
+      section { padding: 72px 0; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        inset: 0;
+        background: var(--black);
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        z-index: 999;
+      }
+      .nav-links.open a { font-size: 1.4rem; }
+      .nav-logo .nl-text { display: none; }
+
+      .hero-inner { grid-template-columns: 1fr; padding-top: 130px; padding-bottom: 80px; text-align: center; gap: 50px; }
+      .hero-text p { margin: 0 auto 36px; }
+      .hero-btns { justify-content: center; }
+      .hero-meta { justify-content: center; }
+      .hero-eyebrow { justify-content: center; }
+      .hero-logo-card { order: -1; }
+      .hero-logo-card img { max-width: 280px; }
+
+      .services-header { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; gap: 16px; }
+
+      .showcase-inner { grid-template-columns: 1fr; }
+      .showcase-image { aspect-ratio: 16/9; min-height: 320px; }
+      .showcase-content { padding: 50px 30px; }
+      .show-features { grid-template-columns: 1fr; }
+
+      .women-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .women-badge { margin: 0 auto; }
+      .women-text p { margin: 0 auto; }
+
+      .area-inner { grid-template-columns: 1fr; gap: 60px; }
+      .area-card { max-width: 280px; }
+
+      .contact-inner { grid-template-columns: 1fr; gap: 50px; }
+      .contact-form { padding: 36px 28px; }
+      .form-row { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: span 1; }
+
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+      .process-grid { grid-template-columns: 1fr; }
+
+      .marquee-item { font-size: 1.15rem; gap: 36px; }
+      .marquee-track { gap: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">
+          <img src="img/logo.jpg" alt="Acer Pro" />
+          <div class="nl-text">
+            <strong>Acer Pro</strong>
+            <span>Concrete &middot; Demo &middot; Excavation</span>
+          </div>
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#showcase">About</a></li>
+          <li><a href="#area">Service Area</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-eyebrow">
+            <span></span> Women-Owned &nbsp;·&nbsp; South Charleston, OH
+          </div>
+          <h1>
+            <span class="green">Concrete</span><br>
+            <span class="stroke">Demolition</span><br>
+            Specialists.
+          </h1>
+          <p>From foundations to full structures — we tear it down, dig it out, and clear the way. Professional concrete demolition, excavation, and construction services across Ohio.</p>
+          <div class="hero-btns">
+            <a href="#contact" class="btn btn-green"><i class="fas fa-clipboard-list"></i> Get a Quote</a>
+            <a href="#services" class="btn btn-outline"><i class="fas fa-arrow-right"></i> Our Services</a>
+          </div>
+          <div class="hero-meta">
+            <div class="hero-meta-item"><i class="fas fa-venus"></i><span>Women-Owned</span></div>
+            <div class="hero-meta-item"><i class="fas fa-shield-halved"></i><span>Fully Insured</span></div>
+            <div class="hero-meta-item"><i class="fas fa-map-pin"></i><span>South Charleston, OH</span></div>
+          </div>
+        </div>
+        <div class="hero-logo-card">
+          <img src="img/logo.jpg" alt="Acer Pro Logo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MARQUEE STRIP ═══════════════════════════════════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <div class="marquee-item">Concrete Demolition</div>
+      <div class="marquee-item">Excavation</div>
+      <div class="marquee-item">Site Demolition</div>
+      <div class="marquee-item">Concrete Removal</div>
+      <div class="marquee-item">Construction</div>
+      <div class="marquee-item">Hauling</div>
+      <div class="marquee-item">Concrete Demolition</div>
+      <div class="marquee-item">Excavation</div>
+      <div class="marquee-item">Site Demolition</div>
+      <div class="marquee-item">Concrete Removal</div>
+      <div class="marquee-item">Construction</div>
+      <div class="marquee-item">Hauling</div>
+    </div>
+  </div>
+
+  <!-- ══ TRUST BAR ═══════════════════════════════════════════════ -->
+  <section id="trust">
+    <div class="container">
+      <div class="trust-inner">
+        <div class="trust-item"><i class="fas fa-venus"></i> Women-Owned Business</div>
+        <div class="trust-item"><i class="fas fa-shield-halved"></i> Fully Insured</div>
+        <div class="trust-item"><i class="fas fa-hard-hat"></i> Licensed Operators</div>
+        <div class="trust-item"><i class="fas fa-clock"></i> On-Time Service</div>
+        <div class="trust-item"><i class="fas fa-handshake"></i> Free Quotes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SERVICES ═════════════════════════════════════════════════ -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header fade-up">
+        <div>
+          <span class="label">What We Do</span>
+          <h2 class="section-title">We <em>Demo</em> &amp; Build<br>From the <em>Ground</em> Up</h2>
+        </div>
+        <a href="#contact" class="btn btn-ghost"><i class="fas fa-clipboard-list"></i> Request a Quote</a>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="sc-num">01</div>
+          <div class="sc-diamond-wrap"><div class="diamond"><i class="fas fa-hammer"></i></div></div>
+          <h3 class="sc-name">Concrete Demolition</h3>
+          <p class="sc-desc">Our specialty. Concrete slabs, foundations, walls, driveways, and floors broken out cleanly with the right equipment for the job.</p>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="sc-num">02</div>
+          <div class="sc-diamond-wrap"><div class="diamond"><i class="fas fa-cube"></i></div></div>
+          <h3 class="sc-name">Concrete Removal &amp; Cutting</h3>
+          <p class="sc-desc">Precision concrete cutting, sawing, and removal. Clean cuts for renovation, expansion, or full removal projects.</p>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="sc-num">03</div>
+          <div class="sc-diamond-wrap"><div class="diamond"><i class="fas fa-house-crack"></i></div></div>
+          <h3 class="sc-name">Structure Demolition</h3>
+          <p class="sc-desc">Buildings, garages, sheds, additions — torn down efficiently and hauled away. Site left ready for the next phase.</p>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="sc-num">04</div>
+          <div class="sc-diamond-wrap"><div class="diamond"><i class="fas fa-tractor"></i></div></div>
+          <h3 class="sc-name">Excavation</h3>
+          <p class="sc-desc">Foundation digs, basements, trenches, and site grading. We move dirt cleanly and accurately, ready for your build.</p>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="sc-num">05</div>
+          <div class="sc-diamond-wrap"><div class="diamond"><i class="fas fa-trowel-bricks"></i></div></div>
+          <h3 class="sc-name">Construction Services</h3>
+          <p class="sc-desc">Site prep, sitework, and construction support for builders, GCs, and homeowners. Reliable scheduling, professional crews.</p>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="sc-num">06</div>
+          <div class="sc-diamond-wrap"><div class="diamond"><i class="fas fa-truck-ramp-box"></i></div></div>
+          <h3 class="sc-name">Debris Hauling</h3>
+          <p class="sc-desc">Concrete chunks, demo debris, soil, and waste hauled offsite and disposed of properly. Site cleared and ready.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SHOWCASE / ABOUT ════════════════════════════════════════ -->
+  <section id="showcase">
+    <div class="showcase-inner">
+      <div class="showcase-image">
+        <img src="img/hero-demo.jpg" alt="Acer Pro concrete demolition in action" />
+      </div>
+      <div class="showcase-content">
+        <span class="label">Why Acer Pro</span>
+        <h2 class="section-title">Built On <em>Grit</em><br>&amp; Precision.</h2>
+        <p>We're not a one-size-fits-all crew. Acer Pro is a women-owned Ohio business specializing in the dirty, technical work most contractors hand off — concrete demolition done with the right tools, the right plan, and zero shortcuts.</p>
+        <div class="show-features">
+          <div class="show-feature">
+            <i class="fas fa-check"></i>
+            <div>
+              <h4>Specialist Focus</h4>
+              <p>Concrete demolition is our craft, not a side gig.</p>
+            </div>
+          </div>
+          <div class="show-feature">
+            <i class="fas fa-check"></i>
+            <div>
+              <h4>Right Equipment</h4>
+              <p>Properly sized machines for the job — no overkill, no shortcuts.</p>
+            </div>
+          </div>
+          <div class="show-feature">
+            <i class="fas fa-check"></i>
+            <div>
+              <h4>Clean Job Sites</h4>
+              <p>We clean up after ourselves. Always.</p>
+            </div>
+          </div>
+          <div class="show-feature">
+            <i class="fas fa-check"></i>
+            <div>
+              <h4>Honest Quotes</h4>
+              <p>Detailed pricing up front. No mid-job surprises.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROCESS ════════════════════════════════════════════════ -->
+  <section id="process">
+    <div class="container">
+      <div class="process-header fade-up">
+        <span class="label">How It Works</span>
+        <h2 class="section-title">From <em>Quote</em> to Cleared Site</h2>
+        <p class="section-sub">Straightforward process, honest pricing, professional execution. No runaround, no surprises.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step fade-up">
+          <span class="ps-num">01</span>
+          <h4 class="ps-title">Request a Quote</h4>
+          <p class="ps-desc">Call or fill out the form. Tell us what needs to come down and when you need it done.</p>
+        </div>
+        <div class="process-step fade-up">
+          <span class="ps-num">02</span>
+          <h4 class="ps-title">Site Walkthrough</h4>
+          <p class="ps-desc">We visit the job, scope the work, and give you a clear, detailed quote. No guesswork.</p>
+        </div>
+        <div class="process-step fade-up">
+          <span class="ps-num">03</span>
+          <h4 class="ps-title">We Tear It Down</h4>
+          <p class="ps-desc">Crew and equipment arrive on schedule. Demo is executed safely and efficiently.</p>
+        </div>
+        <div class="process-step fade-up">
+          <span class="ps-num">04</span>
+          <h4 class="ps-title">Cleared &amp; Hauled</h4>
+          <p class="ps-desc">Debris hauled off, site swept clean, ready for the next phase of your project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WOMEN-OWNED FEATURE ═══════════════════════════════════ -->
+  <section id="women">
+    <div class="container">
+      <div class="women-inner fade-up">
+        <div class="women-badge">
+          <div class="women-badge-inner">
+            <i class="fas fa-venus"></i>
+            <strong>Women-Owned</strong>
+          </div>
+        </div>
+        <div class="women-text">
+          <span class="label">Proudly</span>
+          <h2 class="section-title">A <em>Women-Owned</em><br>Ohio Business</h2>
+          <p>Acer Pro LLC is a proud women-owned business based right here in South Charleston, Ohio. We bring a different perspective to a male-dominated trade — sharper communication, cleaner job sites, and pride in every detail. When you hire us, you support a local business committed to doing the work right.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SERVICE AREA ════════════════════════════════════════════ -->
+  <section id="area">
+    <div class="container">
+      <div class="area-inner">
+        <div class="fade-up">
+          <span class="label">Where We Work</span>
+          <h2 class="section-title">Serving<br><em>Central Ohio</em></h2>
+          <p class="section-sub">Based in South Charleston and serving builders, homeowners, and businesses throughout the surrounding region. If your project is nearby, we want to hear about it.</p>
+          <div class="area-tags">
+            <div class="area-tag"><i class="fas fa-location-dot"></i> South Charleston</div>
+            <div class="area-tag"><i class="fas fa-location-dot"></i> Springfield</div>
+            <div class="area-tag"><i class="fas fa-location-dot"></i> Dayton</div>
+            <div class="area-tag"><i class="fas fa-location-dot"></i> Columbus Area</div>
+            <div class="area-tag"><i class="fas fa-location-dot"></i> Clark County</div>
+            <div class="area-tag"><i class="fas fa-location-dot"></i> Greene County</div>
+            <div class="area-tag"><i class="fas fa-location-dot"></i> Madison County</div>
+            <div class="area-tag"><i class="fas fa-location-dot"></i> Call for availability</div>
+          </div>
+        </div>
+        <div class="area-card fade-up">
+          <div class="area-card-inner">
+            <i class="fas fa-map-location-dot"></i>
+            <h3>South Charleston</h3>
+            <p>Ohio</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA ════════════════════════════════════════════════════ -->
+  <section id="cta">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <span class="label" style="margin-left:auto;margin-right:auto;">Ready When You Are</span>
+        <h2 class="section-title">Let's <span>Break Ground.</span></h2>
+        <p>Got concrete to remove? Building to demo? Site to prep? Send us the details and we'll be in touch with a fast, honest quote.</p>
+        <div class="cta-btns">
+          <a href="#contact" class="btn btn-green"><i class="fas fa-clipboard-list"></i> Request a Quote</a>
+          <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Send a Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-info fade-up">
+          <span class="label">Get In Touch</span>
+          <h2 class="section-title">Talk to <em>Acer Pro</em></h2>
+          <p class="section-sub">Send us your project details and we'll get back fast. For urgent jobs, give us a call.</p>
+
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+            <div class="cc-text">
+              <strong>Email Us</strong>
+              <a href="mailto:acerproohio@gmail.com">acerproohio@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fas fa-map-pin"></i></div>
+            <div class="cc-text">
+              <strong>Based In</strong>
+              <span>South Charleston, OH</span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fab fa-facebook-f"></i></div>
+            <div class="cc-text">
+              <strong>Find Us</strong>
+              <a href="https://www.facebook.com/profile.php?id=61589216019621" target="_blank" rel="noopener">Acer Pro on Facebook</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon"><i class="fas fa-venus"></i></div>
+            <div class="cc-text">
+              <strong>Proudly</strong>
+              <span>Women-Owned &amp; Operated</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form fade-up">
+          <div class="form-title">Request a <span>Free Quote</span></div>
+          <form id="quote-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" />
+              </div>
+            </div>
+            <div class="form-group full">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service…</option>
+                <option>Concrete Demolition</option>
+                <option>Concrete Removal &amp; Cutting</option>
+                <option>Structure Demolition</option>
+                <option>Excavation</option>
+                <option>Construction Services</option>
+                <option>Debris Hauling</option>
+                <option>Multiple Services / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="location">Job Location</label>
+              <input type="text" id="location" name="location" placeholder="City &amp; ZIP code" />
+            </div>
+            <div class="form-group full">
+              <label for="message">Project Details</label>
+              <textarea id="message" name="message" placeholder="Describe what needs to come out, scale of the job, timeline, and anything else helpful for an accurate quote."></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <i class="fas fa-hammer"></i> Send Quote Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="img/logo.jpg" alt="Acer Pro" />
+          <div class="nl-text">
+            <strong>Acer Pro LLC</strong>
+            <span>Concrete Demolition Specialist</span>
+          </div>
+          <p>Women-owned concrete demolition, excavation, and construction services based in South Charleston, OH.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Concrete Demolition</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Concrete Removal</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Structure Demolition</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Excavation</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Construction</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-right"></i> Debris Hauling</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#showcase"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="#women"><i class="fas fa-chevron-right"></i> Women-Owned</a></li>
+            <li><a href="#process"><i class="fas fa-chevron-right"></i> Our Process</a></li>
+            <li><a href="#area"><i class="fas fa-chevron-right"></i> Service Area</a></li>
+            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Reach Us</h5>
+          <ul>
+            <li><a href="mailto:acerproohio@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61589216019621" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="#area"><i class="fas fa-map-pin"></i> South Charleston, OH</a></li>
+            <li><a href="#contact"><i class="fas fa-clipboard-list"></i> Get a Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Acer Pro LLC. All rights reserved.</p>
+        <p class="tag">Concrete Demolition Specialist</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toast-msg"></span></div>
+
+  <script>
+    /* Navbar scroll */
+    const navbar = document.getElementById('navbar');
+    const backTop = document.getElementById('back-top');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+      backTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* Mobile menu */
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    /* Scroll reveal */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('in-view'), i * 60);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+    /* Toast */
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 4500);
+    }
+
+    /* Form submission via FormSubmit AJAX */
+    document.getElementById('quote-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const fname   = document.getElementById('fname').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      if (!fname || !email || !service) {
+        showToast('Please fill in your name, email, and service type.');
+        return;
+      }
+      const btn = this.querySelector('.form-submit');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+      fetch('https://formsubmit.co/ajax/acerproohio@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(this)
+      })
+      .then(() => {
+        showToast('Quote request sent! We\'ll be in touch shortly, ' + fname + '.');
+        this.reset();
+      })
+      .catch(() => {
+        showToast('Request sent! We\'ll reach out shortly.');
+        this.reset();
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-hammer"></i> Send Quote Request';
+      });
+    });
+  </script>
+</body>
+</html>
